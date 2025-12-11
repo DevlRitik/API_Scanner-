@@ -13,14 +13,15 @@ export const isFile = async (Path: string): Promise<boolean> => {
 }
 
 
-export const isDir = async (Path : string) : Promise<Boolean> => { 
-    try { 
+export const isDir = async (Path: string): Promise<Boolean> => {
+    try {
         const isDir = (await fs.stat(Path)).isDirectory()
         return isDir
-    }catch(e) {
+    } catch (e) {
         return false
     }
 }
+
 
 
 
